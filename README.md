@@ -6,14 +6,14 @@ The goal of this repository is to apply their benchmark to [Delphi](https://delp
 
 ## Usage
 ### 1. Database setup
-First, in a Snowflake data warehouse, run the DDL in this repository to create the necessary tables (it is slightly modified from the [data.world DDL](https://github.com/datadotworld/cwd-benchmark-data/blob/main/ACME_Insurance/DDL/ACME_small.ddl) to remove primary/foreign keys since they will be defined in the semantic layer).
+First, in a Snowflake data warehouse, run [the DDL](https://github.com/Delphi-Data/delphi-semantic-layer-llm-benchmark/blob/main/ACME_small.ddl) from this repository to create the necessary tables (it is slightly modified from the [data.world DDL](https://github.com/datadotworld/cwd-benchmark-data/blob/main/ACME_Insurance/DDL/ACME_small.ddl) to remove primary/foreign keys since they will be defined in the semantic layer).
 
 Next, via your preferred method (such as the Snowflake UI), upload the relevant data files from https://github.com/datadotworld/cwd-benchmark-data/tree/main/ACME_Insurance/data to the tables you just created.
 
 ### 2. Semantic Layer setup (Cube)
 If you don't already have an account, sign up for Cube's free tier at https://cube.dev.
 
-Create a new project using your Snowflake credentials and the Cube schema contained in this repository.
+Create a new project using your Snowflake credentials and [the Cube schema](https://github.com/Delphi-Data/delphi-semantic-layer-llm-benchmark/tree/main/cube) contained in this repository.
 
 ### 3. Connect Delphi to Cube
 Sign up for the free tier of Delphi at https://app.delphihq.com.
@@ -21,7 +21,7 @@ Sign up for the free tier of Delphi at https://app.delphihq.com.
 Click "Cube" on the connection screen and enter your credentials from Cube. Click through to save the connection.
 
 ### 4. Run queries
-Go to the benchmark results sheet and copy/paste questions from the `challenge_text` field into Delphi.
+Go to the [benchmark results sheet](https://docs.google.com/spreadsheets/d/1e1-miHb3ZP-dVnsSquMt7aaHWht-Csd5nMoPsQTglsI/edit?usp=sharing) and copy/paste questions from the `challenge_text` field into Delphi.
 
 It will tell you the results and you can also view the Cube query that was run to validate it.
 
